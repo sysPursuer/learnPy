@@ -23,5 +23,5 @@ d['Tom'] = 88
 print(d)
 
 #dict根据key来计算value的存储位置，如果每次计算相同的key得出的结果不同，
-#那dict内部就完全混乱了，这个通过key计算位置的算法称为2Hash,要保证hash正确性
+#那dict内部就完全混乱了，这个通过key计算位置的算法称为Hash,要保证hash正确性
 #作为Key的对象就不能变，所以list不能作为key
