@@ -24,3 +24,21 @@ print(a(-1))
 
 #hex函数将整数转为16进制数
 print(hex(23333))
+
+#默认参数
+def power(x,n=2)
+	s = 1
+	while(n>0):
+		n = n-1
+		s = s * x
+	return s
+
+print(power(3))
+
+
+#默认参数必须要指向不变对象
+def add_end(L=None):
+    if L is None:
+        L = []
+    L.append('END')
+    return L
