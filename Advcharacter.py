@@ -80,12 +80,25 @@ while True:
 	except StopIteration as e:
 		print('Generator return value:',e.value)
 		break
-#迭代器
+#迭代器 iterator
+#作用于for循环的数据类型（iterable 可迭代对象）有：
 #一类是集合数据类型，如list、tuple、dict、set、str等；
 #一类是generator，包括生成器和带yield的generator function。
 
-#判断是否为可迭代对象
+#判断是否为可迭代对象,可以被next()函数调用并不断返回下一个值的对象称为迭代器：Iterator。
 from collections import Iterator
 print(isinstance((x for x in range(10)),Iterator))
 print(isinstance('abc',Iterator))
+#集合数据类型如list、dict、str等是Iterable但不是Iterator，
+#不过可以通过iter()函数获得一个Iterator对象。
+# 首先获得Iterator对象:
+it = iter([1, 2, 3, 4, 5])
+# 循环:
+while True:
+    try:
+        # 获得下一个值:
+        x = next(it)
+    except StopIteration:
+        # 遇到StopIteration就退出循环
+        break
 
